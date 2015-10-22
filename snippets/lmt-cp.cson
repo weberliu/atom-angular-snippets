@@ -1,0 +1,13 @@
+'.source.js':
+  'Copyright':
+    'prefix': 'lmt'
+    'body': """
+/**
+ * ${1:description}
+ *
+ * (C) ${2:2015} LMT Team, all rights reserved.
+ * http://www.lemaitong.com
+ */
+
+$0
+"""

@@ -1,0 +1,12 @@
+'.source.js':
+  'Function':
+    'prefix': 'fn'
+    'body': """
+/**
+ * ${1:description}
+ */
+function ${2:name}(${3:arguments}) {
+  // TODO:
+  $0
+} //-- end ${2:name}()
+"""

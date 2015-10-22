@@ -4,16 +4,16 @@
     'prefix': 'ngmc'
     'body': """
   ng
-    .module("${1:module}"${2: ,[${3:dependencies}]})
+    .module("${1:module}"${2:, [${3:dependencies}]})
     .controller(${4:controller})
 
   /////////////////////////////////////
-  // ${4:controller}                 //
+  // ${4:controller} ${5:space} //
   /////////////////////////////////////
 
-  ${4:controller}.$inject = [${5:dependencies}]
+  ${4:controller}.$inject = ['$scope'${6:dependencies}]
 
-  function ${4:controller}(${5:dependencies}) {
+  function ${4:controller}($scope${7:dependencies}) {
     initialize()
 
     ///////////////////////////////////
@@ -39,6 +39,6 @@
     ///////////////////////////////////
 
 
-  }
+  } //-- end {$:controller}
 
 """
