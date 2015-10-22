@@ -1,6 +1,6 @@
 '.source.js':
   'Angular application':
-    'prefix': 'ngm'
+    'prefix': 'ng'
     'body': """
 +function (ng) {
   'use strict';
