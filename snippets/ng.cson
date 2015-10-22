@@ -1,0 +1,12 @@
+'.source.js':
+  'Angular application':
+    'prefix': 'ngm'
+    'body': """
++function (ng) {
+  'use strict';
+
+  $0
+
+} (angular);
+
+"""

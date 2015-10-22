@@ -1,0 +1,44 @@
+'.source.js':
+
+  'Angular module and controller':
+    'prefix': 'ngmc'
+    'body': """
+  ng
+    .module("${1:module}"${2: ,[${3:dependencies}]})
+    .controller(${4:controller})
+
+  /////////////////////////////////////
+  // ${4:controller}                 //
+  /////////////////////////////////////
+
+  ${4:controller}.$inject = [${5:dependencies}]
+
+  function ${4:controller}(${5:dependencies}) {
+    initialize()
+
+    ///////////////////////////////////
+    // Initialization                //
+    ///////////////////////////////////
+
+    function initialize() {
+      $0
+    }
+
+    ///////////////////////////////////
+    // Scope Methods                 //
+    ///////////////////////////////////
+
+
+    ///////////////////////////////////
+    // Event handlers                //
+    ///////////////////////////////////
+
+
+    ///////////////////////////////////
+    // Private functions             //
+    ///////////////////////////////////
+
+
+  }
+
+"""

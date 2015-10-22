@@ -1,0 +1,8 @@
+'.source.js':
+  'Angular module':
+    'prefix': 'ngm'
+    'body': """
+  ng
+    .module( "${1:module}"${2: ,[${3:dependencies}]} )
+    $0
+"""
