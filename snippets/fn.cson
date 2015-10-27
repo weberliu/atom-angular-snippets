@@ -1,6 +1,6 @@
 '.source.js':
   'Function':
-    'prefix': 'fn'
+    'prefix': 'fun'
     'body': """
 /**
  * ${1:description}
