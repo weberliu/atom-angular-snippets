@@ -1,0 +1,48 @@
+'.source.js':
+
+  'Angular module and controller':
+    'prefix': 'ngmd'
+    'body': """
+  ng
+    .module("${1:module}"${2:, [${3:dependencies}]})
+    .directive('${4:directive}', ${4:directive})
+
+  //////////////////////////////////////
+  // Directive function               //
+  //////////////////////////////////////
+
+  function ${4:directive}(${5:arguments}) {
+    var _directive = {
+      restrict: '${6:ECA}',
+      replace: ${7:true false},
+      transclude: ${8:true false},
+      scope: ${9:true false},
+      ${10:others}
+      link: ${11:linkFn}
+    }
+
+    function ${11:linkFn} ($scope, elem, attrs) {
+      initialize()
+
+      function initialize() {
+        $0
+      } //-- end initialize()
+
+      //////////////////////////////////
+      // scope methods                //
+      //////////////////////////////////
+
+
+      //////////////////////////////////
+      // event handlers               //
+      //////////////////////////////////
+
+      //////////////////////////////////
+      // private methods              //
+      //////////////////////////////////
+
+    } //-- end ${11:linkFn}()
+
+  } //-- end ${4:directive}()
+
+"""
