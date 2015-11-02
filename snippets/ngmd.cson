@@ -14,9 +14,9 @@
   function ${4:directive}(${5:arguments}) {
     var _directive = {
       restrict: '${6:ECA}',
-      replace: ${7:true false},
-      transclude: ${8:true false},
-      scope: ${9:true false},
+      replace: ${7:true|false},
+      transclude: ${8:true|false},
+      scope: ${9:true|false},
       ${10:others}
       link: ${11:linkFn}
     }
@@ -43,6 +43,7 @@
 
     } //-- end ${11:linkFn}()
 
+    return _directive
   } //-- end ${4:directive}()
 
 """
