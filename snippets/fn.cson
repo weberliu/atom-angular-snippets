@@ -1,11 +1,8 @@
 '.source.js':
   'Function':
-    'prefix': 'fun'
+    'prefix': ['fun', 'function']
     'body': """
-/**
- * ${1:description}
- */
-function ${2:name}(${3:arguments}) {
+function ${1:name}(${2:arguments}) {
   $0
-} //-- end ${2:name}()
+} //-- end ${3:name}()
 """
