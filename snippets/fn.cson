@@ -1,6 +1,13 @@
 '.source.js':
   'Function':
-    'prefix': ['fun', 'function']
+    'prefix': 'fun'
+    'body': """
+function ${1:name}(${2:arguments}) {
+  $0
+} //-- end ${3:name}()
+"""
+  'Function':
+    'prefix': 'function'
     'body': """
 function ${1:name}(${2:arguments}) {
   $0
