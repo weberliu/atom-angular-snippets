@@ -3,47 +3,54 @@
   'Angular module and controller':
     'prefix': 'ngmd'
     'body': """
-  ng
-    .module("${1:module}"${2:, [${3:dependencies}]})
-    .directive('${4:directive}', ${4:directive})
 
-  //////////////////////////////////////
-  // Directive function               //
-  //////////////////////////////////////
+ng
+	.module('${1:module}'${2:, [${3:dependencies}]})
+	.directive('${4:directive}', ${4:directive})
 
-  function ${4:directive}(${5:arguments}) {
-    var _directive = {
-      restrict: '${6:ECA}',
-      replace: ${7:true|false},
-      transclude: ${8:true|false},
-      scope: ${9:true|false},
-      ${10:others}
-      link: ${11:linkFn}
-    }
+/////////////////////////////////////
+// Directive function              //
+/////////////////////////////////////
 
-    function ${11:linkFn} ($scope, elem, attrs) {
-      initialize()
+/* @ngInject */
+function ${4:directive}() {
+	var directive = {
+		restrict: '${5:EAC}',
+		templateUrl: '${6:templateUrl}',
+		scope: {
+		},
+		link: linkFunc,
+		controller: ${7:Controller},
+		controllerAs: 'vm',
+		bindToController: true
+	}
 
-      function initialize() {
-        $0
-      } //-- end initialize()
+	return directive
 
-      //////////////////////////////////
-      // scope methods                //
-      //////////////////////////////////
+  ///////////////////////////////////
+  // Link function                 //
+  ///////////////////////////////////
 
+  function linkFunc(\$scope, elem, attrs, ctrl) {
 
-      //////////////////////////////////
-      // event handlers               //
-      //////////////////////////////////
+  }
 
-      //////////////////////////////////
-      // private methods              //
-      //////////////////////////////////
+  ///////////////////////////////////
+  // Controller function           //
+  ///////////////////////////////////
 
-    } //-- end ${11:linkFn}()
+  ${7:Controller}.\$inject = ['${8:dependencies}']
 
-    return _directive
-  } //-- end ${4:directive}()
+  /* @ngInject */
+  function ${7:Controller}(${8:dependencies}) {
+  	var vm = this
+
+  	activate()
+
+  	function activate() {
+
+  	}
+  }
+}
 
 """

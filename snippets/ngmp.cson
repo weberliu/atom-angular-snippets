@@ -2,9 +2,9 @@
   'Angular Provider':
     'prefix': 'ngmp'
     'body': """
-  ng
-    .module("${1:module}"${2:, [${3:dependencies}]})
-    .provider('$${4:providerName}', $${4:providerName}Provider)
+ng
+  .module("${1:module}"${2:, [${3:dependencies}]})
+  .provider('$${4:providerName}', $${4:providerName}Provider)
 
 /////////////////////////////////////
 // Provider function               //

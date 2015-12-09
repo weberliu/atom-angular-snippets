@@ -1,0 +1,26 @@
+'.source.js':
+
+  'Angular module and controller':
+    'prefix': 'ngmf'
+    'body': """
+
+ng
+	.module('${1:module}')
+	.factory('${2:factory}', ${2:factory});
+
+	${2:factory}.$inject = ['${3:dependencies}'];
+
+	/* @ngInject */
+	function ${2:factory}(${3:dependencies}) {
+		var service = {
+			${4:function}: ${4:function}
+		};
+
+		return service;
+
+		function ${4:function}() {
+
+		}
+	}
+
+"""

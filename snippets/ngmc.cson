@@ -4,53 +4,58 @@
     'prefix': 'ngmc'
     'body': """
 
-  /////////////////////////////////////
-  // ${1:Router rules} ${2:space} //
-  /////////////////////////////////////
+ng
+	.module("${1:module}"${2:, [${3:dependencies}]})
+	.config(${4:router})
+	.controller(${5:controller})
 
-  function ${3:router}($stateProvider) {
-    var _router = {
-      url: '${4:/}',
-      template: '${5:template_path}',
-      controller: ${6:controller}
-    }
+/////////////////////////////////////
+// Router configuration            //
+/////////////////////////////////////
 
-    $stateProvider.state(_router)
-  } //-- ${3:router}()
+function ${4:router}(\$urlRouterProvider, \$stateProvider) {
+	var _router = {
+		url: '${6:/}',
+		template${7:Url}: '${8:template_path}',
+		controller: ${5:controller}
+	}
 
-  /////////////////////////////////////
-  // ${6:controller} ${7:space} //
-  /////////////////////////////////////
+	\$stateProvider.state('${9:state_name}', _router)
+} //-- ${4:router}()
 
-  ${6:controller}.$inject = ['$scope'${7:dependencies}]
+/////////////////////////////////////
+// Controller functions            //
+/////////////////////////////////////
 
-  function ${6:controller}($scope${7:dependencies}) {
-    initialize()
+${5:controller}.\$inject = ['\$scope']
 
-    ///////////////////////////////////
-    // Initialization                //
-    ///////////////////////////////////
+function ${5:controller}(\$scope) {
+	initialize()
 
-    function initialize() {
-      $0
-    }
+	///////////////////////////////////
+	// Initialization                //
+	///////////////////////////////////
 
-    ///////////////////////////////////
-    // Scope Methods                 //
-    ///////////////////////////////////
+	function initialize() {
+		$0
+	}
 
-
-    ///////////////////////////////////
-    // Event handlers                //
-    ///////////////////////////////////
-
-
-    ///////////////////////////////////
-    // Private functions             //
-    ///////////////////////////////////
+	///////////////////////////////////
+	// Scope methods                 //
+	///////////////////////////////////
 
 
-  } //-- end ${6:controller}
+	///////////////////////////////////
+	// Event handlers                //
+	///////////////////////////////////
+
+
+	///////////////////////////////////
+	// Private functions             //
+	///////////////////////////////////
+
+
+} //-- end ${5:controller}()
 
   ng
     .module("${8:module}"${9:, [${10:dependencies}]})
