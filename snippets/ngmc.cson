@@ -6,14 +6,14 @@
 
 ng
 	.module("${1:module}"${2:, [${3:dependencies}]})
-	.config(${4:router})
+	.config(${4:config})
 	.controller(${5:controller})
 
 /////////////////////////////////////
 // Router configuration            //
 /////////////////////////////////////
 
-function ${4:router}(\$urlRouterProvider, \$stateProvider) {
+function ${4:config}(\$urlRouterProvider, \$stateProvider) {
 	var _router = {
 		url: '${6:/}',
 		template${7:Url}: '${8:template_path}',
@@ -21,7 +21,7 @@ function ${4:router}(\$urlRouterProvider, \$stateProvider) {
 	}
 
 	\$stateProvider.state('${9:state_name}', _router)
-} //-- ${4:router}()
+} //-- ${4:config}()
 
 /////////////////////////////////////
 // Controller functions            //
@@ -56,10 +56,5 @@ function ${5:controller}(\$scope) {
 
 
 } //-- end ${5:controller}()
-
-  ng
-    .module("${8:module}"${9:, [${10:dependencies}]})
-    .config(${3:router})
-    .controller(${6:controller})
 
 """

@@ -4,5 +4,5 @@
     'body': """
 function ${1:name}(${2:arguments}) {
   $0
-} //-- end ${3:name}()
+} //-- end ${1:name}()
 """

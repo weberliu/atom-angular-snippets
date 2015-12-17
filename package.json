@@ -1,0 +1,16 @@
+{
+  "name": "Angular",
+  "version": "0.0.1",
+  "description": "Angular snippets",
+  "repository": "https://github.com/weberliu/atom-angular-snippets",
+  "homepage": "https://github.com/weberliu/atom-angular-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.150.0"
+  },
+  "scripts": {
+    "test": "apm test"
+  },
+  "dependencies": {
+  }
+}
