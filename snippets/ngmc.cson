@@ -14,13 +14,13 @@ ng
 /////////////////////////////////////
 
 function ${4:config}(\$urlRouterProvider, \$stateProvider) {
-	var _router = {
-		url: '${6:/}',
-		template${7:Url}: '${8:template_path}',
-		controller: ${5:controller}
-	}
+	var rootRouter = {
+    		url: '${6:/}',
+    		template${7:Url}: '${8:template_path}',
+    		controller: ${5:controller}
+    	}
 
-	\$stateProvider.state('${9:state_name}', _router)
+	\$stateProvider.state('${9:state_name}', rootRouter)
 } //-- ${4:config}()
 
 /////////////////////////////////////
